@@ -1,0 +1,1553 @@
+type: spec.insomnia.rest/5.0
+name: API Educacional 1.0.0
+meta:
+  id: wrk_3c27648132154fb5a38565c0978946c0
+  created: 1751941174496
+  modified: 1751941174496
+  description: ""
+collection:
+  - name: Produtos
+    meta:
+      id: fld_34e704aaabb74471a57e5b2756d419b9
+      created: 1751941197513
+      modified: 1751942325487
+      sortKey: -1751941621274
+      description: Operações relacionadas a produtos
+    children:
+      - url: "{{ _.base_url }}/products"
+        name: Cadastra um novo produto
+        meta:
+          id: req_5973d1d3fc774e119cbc633db0f16e0c
+          created: 1751941197515
+          modified: 1751941197515
+          isPrivate: false
+          description: ""
+          sortKey: -1751941197515
+        method: POST
+        body:
+          mimeType: application/json
+          text: >-
+            {
+              "name": "Smartphone X",
+              "description": "Smartphone de última geração com câmera de alta resolução.",
+              "price": 999.99,
+              "quantity": 50,
+              "category": "60d5ec49f8c6d1a2b4e5f6g7"
+            }
+        headers:
+          - name: Content-Type
+            disabled: false
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/products"
+        name: Lista todos os produtos
+        meta:
+          id: req_f5887b96ead749c595f6fd1a19bdd836
+          created: 1751941197516
+          modified: 1751941197516
+          isPrivate: false
+          description: ""
+          sortKey: -1751941197516
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/products/6830d44a651ba0f32dfbc3f4"
+        name: Atualiza um produto por ID
+        meta:
+          id: req_3dc5d136c607427786cadc20a50bbb53
+          created: 1751941197517
+          modified: 1751943786781
+          isPrivate: false
+          description: ""
+          sortKey: -1751941197517
+        method: PUT
+        body:
+          mimeType: application/json
+          text: >-
+            {
+              "name": "Smartphone X",
+              "description": "Smartphone de última geração com câmera de alta resolução.",
+              "price": "999.99",
+              "quantity": 50,
+              "category": "60d5ec49f8c6d1a2b4e5f6g7"
+            }
+        headers:
+          - name: Content-Type
+            disabled: false
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/products/{{ _.id }}"
+        name: Exclui um produto por ID
+        meta:
+          id: req_4d6dde049f3e46db8d45e8b5b7bbea6b
+          created: 1751941197517
+          modified: 1751941197517
+          isPrivate: false
+          description: ""
+          sortKey: -1751941197517
+        method: DELETE
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/products/{{ _.id }}"
+        name: Busca um produto por ID
+        meta:
+          id: req_f4d395b3b6334fc7ac7b2aafc5207980
+          created: 1751941197517
+          modified: 1751941197517
+          isPrivate: false
+          description: ""
+          sortKey: -1751941197517
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/products/category/{{ _.categoryId }}"
+        name: Lista produtos por ID de categoria
+        meta:
+          id: req_320cf075303441798339a50fefd7c9f3
+          created: 1751941197518
+          modified: 1751941197518
+          isPrivate: false
+          description: ""
+          sortKey: -1751941197518
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Usuários
+    meta:
+      id: fld_5429786193c840459b8d6b524c3a1594
+      created: 1751941197514
+      modified: 1751941197514
+      sortKey: -1751941197514
+      description: Operações relacionadas a usuários
+    children:
+      - url: "{{ _.base_url }}/users"
+        name: Cadastra um novo usuário
+        meta:
+          id: req_142e37ac7ff744e38b1e33b2c3df519e
+          created: 1751941197519
+          modified: 1751943036631
+          isPrivate: false
+          description: ""
+          sortKey: -1751941197519
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "name": "007",
+              "email": "joao.silva@example.com"
+            }
+        headers:
+          - name: Content-Type
+            disabled: false
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/users/{{ _.id }}"
+        name: Exclui um usuário por ID
+        meta:
+          id: req_a882fea680cc4ec594508be67bc5b532
+          created: 1751941197520
+          modified: 1751941197520
+          isPrivate: false
+          description: ""
+          sortKey: -1751941197520
+        method: DELETE
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/users"
+        name: Lista todos os usuários
+        meta:
+          id: req_d278cfa08fa54b0cbe7a6b30eadb05ce
+          created: 1751941197520
+          modified: 1751944085496
+          isPrivate: false
+          description: ""
+          sortKey: -1751941197520
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/users/683a3448848708bda9c6faaa"
+        name: Busca um usuário por ID
+        meta:
+          id: req_e0f273bea3a44ff19e84396ea99a889c
+          created: 1751941197520
+          modified: 1751944177225
+          isPrivate: false
+          description: ""
+          sortKey: -1751941197520
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Categorias
+    meta:
+      id: fld_d3135ab08c544b3a8648b6f175fa3282
+      created: 1751941197514
+      modified: 1751941197514
+      sortKey: -1751941197514
+      description: Operações relacionadas a categorias
+    children:
+      - url: "{{ _.base_url }}/categories"
+        name: Lista todas as categorias
+        meta:
+          id: req_092805fa32734e5ca80a23fef580e967
+          created: 1751941197518
+          modified: 1751941197518
+          isPrivate: false
+          description: ""
+          sortKey: -1751941197518
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/categories"
+        name: Cadastra uma nova categoria
+        meta:
+          id: req_09eecbfd2bc44fa1ba51922841acce7a
+          created: 1751941197518
+          modified: 1751943396147
+          isPrivate: false
+          description: ""
+          sortKey: -1751941197518
+        method: POST
+        body:
+          mimeType: application/json
+          text: >-
+            {
+              "name": "laptop - com um design legal ",
+              "description": "Produtos eletrônicos como smartphones, laptops, etc. como laptop, ipad, telefone, mouse, iphone, airpad, relogio"
+            }
+        headers:
+          - name: Content-Type
+            disabled: false
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/categories/{{ _.id }}"
+        name: Busca uma categoria por ID
+        meta:
+          id: req_8f9287861d5144f4818d9360f927e0ba
+          created: 1751941197518
+          modified: 1751941197518
+          isPrivate: false
+          description: ""
+          sortKey: -1751941197518
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/categories/{{ _.id }}"
+        name: Atualiza uma categoria por ID
+        meta:
+          id: req_e7dd0036dcaa4b2a9a79c00be635ef04
+          created: 1751941197519
+          modified: 1751941197519
+          isPrivate: false
+          description: ""
+          sortKey: -1751941197519
+        method: PUT
+        body:
+          mimeType: application/json
+          text: >-
+            {
+              "name": "Eletrônicos",
+              "description": "Produtos eletrônicos como smartphones, laptops, etc."
+            }
+        headers:
+          - name: Content-Type
+            disabled: false
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/categories/{{ _.id }}"
+        name: Exclui uma categoria por ID
+        meta:
+          id: req_f1569a97791e4c9a99d26c121aab970d
+          created: 1751941197519
+          modified: 1751941197519
+          isPrivate: false
+          description: ""
+          sortKey: -1751941197519
+        method: DELETE
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Pedidos
+    meta:
+      id: fld_da38235f326d4870a5d4b7f2cbec075b
+      created: 1751941197515
+      modified: 1751941197515
+      sortKey: -1751941197515
+      description: Operações relacionadas a pedidos
+    children:
+      - url: "{{ _.base_url }}/orders"
+        name: Lista todos os pedidos
+        meta:
+          id: req_5b2da016bf094d8ea1cfcc51dd5e3a62
+          created: 1751941197521
+          modified: 1751941197521
+          isPrivate: false
+          description: ""
+          sortKey: -1751941197521
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/orders/{{ _.id }}"
+        name: Busca um pedido por ID
+        meta:
+          id: req_713d9ea5380742a68fd18212c566da82
+          created: 1751941197521
+          modified: 1751941197521
+          isPrivate: false
+          description: ""
+          sortKey: -1751941197521
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/orders"
+        name: Cadastra um novo pedido
+        meta:
+          id: req_af003da7348e4e1f997d5cbdb53b95af
+          created: 1751941197521
+          modified: 1751944611156
+          isPrivate: false
+          description: ""
+          sortKey: -1751941197521
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "user": "683a3448848708bda9c6faaa",
+              "products": [
+                {
+                  "product": "60d5ec49f8c6d1a2b4e5f6g7",
+                  "quantity": 3
+                }
+              ]
+            }
+        headers:
+          - name: Content-Type
+            disabled: false
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/orders/683a3448848708bda9c6faaa"
+        name: Exclui um pedido por ID
+        meta:
+          id: req_386b00e2a6484b7ea18d113f1ee5fbed
+          created: 1751941197522
+          modified: 1751944705564
+          isPrivate: false
+          description: ""
+          sortKey: -1751941197522
+        method: DELETE
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/orders/{{ _.id }}/status"
+        name: Atualiza o status de um pedido por ID
+        meta:
+          id: req_417580fb4501483893e39f3db5e593ae
+          created: 1751941197522
+          modified: 1751941197522
+          isPrivate: false
+          description: ""
+          sortKey: -1751941197522
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "status": "Enviado"
+            }
+        headers:
+          - name: Content-Type
+            disabled: false
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: "{{ _.base_url }}/orders/user/{{ _.userId }}"
+        name: Lista todos os pedidos de um usuário específico
+        meta:
+          id: req_8338cf1da243453d85dd4bc9c2265601
+          created: 1751941197522
+          modified: 1751941197522
+          isPrivate: false
+          description: ""
+          sortKey: -1751941197522
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: User Story
+    meta:
+      id: fld_a53be4643eba414bbe787dee1b2d5f48
+      created: 1751942045033
+      modified: 1751942266511
+      sortKey: -1751942045033
+      description: ""
+    children:
+      - url: ""
+        name: "US001 :: Criação de uma nova categoria"
+        meta:
+          id: req_529922febf7e4366b8cdf7cadf546c2f
+          created: 1751942048754
+          modified: 1751942505906
+          isPrivate: false
+          description: ""
+          sortKey: -1751942502729
+        method: OPTIONS
+        body:
+          mimeType: application/xml
+          text: |-
+            US001 :: Criação de uma nova categoria
+
+            Como usuario da aplicação 
+            Quero cadastrar novas categorias
+            Para vincular seus produtos
+
+            Criterios de Aceitação 
+            - Deve ter um nome unico
+            - A descrição é obrigatoria
+            - O nome deve ser alfanumerico em formato string
+            - o nome deve ter o maximo de 15 caracteres
+            - a descrição deve ter o maximo de 100 caracteres
+        headers:
+          - name: Content-Type
+            value: application/xml
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: ""
+        name: "US004 :: Realizar um pedido"
+        meta:
+          id: req_ab2b3f67e8f348708415cba0e4b308f4
+          created: 1751942496528
+          modified: 1751942696652
+          isPrivate: false
+          description: ""
+          sortKey: -1751942496528
+        method: OPTIONS
+        headers:
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: ""
+        name: "US003 :: Buscar um usuario para realizar um pedido"
+        meta:
+          id: req_7d99f427514748d2a67602caf2ae9d35
+          created: 1751942500519
+          modified: 1751942668844
+          isPrivate: false
+          description: ""
+          sortKey: -1751942500519
+        method: OPTIONS
+        headers:
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: ""
+        name: "US002 :: Alterar informações de um produto existente"
+        meta:
+          id: req_e331c81c294d4a06b5f43a2c76408c46
+          created: 1751942502629
+          modified: 1751942627772
+          isPrivate: false
+          description: ""
+          sortKey: -1751942502629
+        method: OPTIONS
+        headers:
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: ""
+        name: "US005 :: Deletar um pedido"
+        meta:
+          id: req_248e29ba183a4bc4bd5f3f410e1fd7e4
+          created: 1751942703732
+          modified: 1751942738194
+          isPrivate: false
+          description: ""
+          sortKey: -1751942496428
+        method: OPTIONS
+        headers:
+          - name: User-Agent
+            value: insomnia/11.2.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_901263ce4e0c47bd0ad5c595606fb787468a67aa
+    created: 1751941174501
+    modified: 1751941174501
+environments:
+  name: Base Environment
+  meta:
+    id: env_901263ce4e0c47bd0ad5c595606fb787468a67aa
+    created: 1751941174500
+    modified: 1751941197511
+    isPrivate: false
+  data:
+    base_url: "{{ _.scheme }}://{{ _.host }}{{ _.base_path }}"
+  subEnvironments:
+    - name: QA Test
+      meta:
+        id: env_bd3c9e45571d4f8c9a71b9163d21f5c6
+        created: 1751941197512
+        modified: 1751941997282
+        isPrivate: false
+        sortKey: 1751941197512
+      data:
+        scheme: https
+        base_path: /api
+        host: educational-api-75qy.onrender.com
+      color: "#d75bb0"
+spec:
+  contents:
+    openapi: 3.0.0
+    info:
+      title: API Educacional
+      description: "
+
+        \        Uma API simples para cadastro e gerenciamento de produtos,
+        categorias, usuários e pedidos, desenvolvida para fins educacionais.
+
+
+        \        Ela permite o gerenciamento de produtos, categorias, usuários e
+        pedidos.
+
+
+        \        Funcionalidades Principais:
+
+        \        - Produtos: Cadastro, listagem, busca por ID, atualização e
+        exclusão de produtos.
+
+        \        - Categorias: Cadastro, listagem, busca por ID, atualização e
+        exclusão de categorias.
+
+        \        - Usuários: Cadastro, listagem, busca por ID e exclusão de
+        usuários.
+
+        \        - Pedidos: Criação de pedidos (com verificação de estoque),
+        listagem, busca por ID, atualização de status e exclusão de pedidos.
+
+
+        \        Regras de Negócio e Tratamento de Erros:
+
+        \        - Validação de Campos: Todas as requisições POST e PUT validam
+        a presença e o formato dos campos obrigatórios. Campos como 'name' (para
+        categorias) e 'email' (para usuários) devem ser únicos.
+
+        \        - Validação de IDs:
+
+        \            - Ao criar/atualizar um produto, a 'category' fornecida
+        deve corresponder a uma categoria existente.
+
+        \            - Ao criar um pedido, o 'user' e os 'products'
+        referenciados devem existir.
+
+        \            - Requisições que utilizam IDs no caminho (path parameters)
+        ou no corpo da requisição:
+
+        \                - Se o ID for inválido (formato incorreto) ou não for
+        encontrado no banco de dados, a API retornará um status `404 Not Found`
+        com uma mensagem clara de que o recurso não foi encontrado. Isso unifica
+        o tratamento de erros para IDs.
+
+        \        - Estoque: A criação de pedidos verifica a disponibilidade de
+        estoque dos produtos. Se o estoque for insuficiente, a requisição
+        retornará `400 Bad Request`.
+
+        \        - Status de Pedido: A atualização do status de um pedido aceita
+        apenas valores predefinidos (Pendente, Processando, Enviado, Entregue,
+        Cancelado).
+
+        \        - Códigos de Status HTTP:
+
+        \            - `200 OK`: Requisição bem-sucedida.
+
+        \            - `201 Created`: Recurso criado com sucesso.
+
+        \            - `400 Bad Request`: Dados da requisição inválidos
+        (validação falhou, campos faltando, etc.).
+
+        \            - `404 Not Found`: Recurso não encontrado (ID inválido ou
+        inexistente).
+
+        \            - `500 Internal Server Error`: Erro inesperado no servidor.
+
+        \        "
+      version: 1.0.0
+    servers:
+      - url: https://educational-api-75qy.onrender.com/api
+        description: Servidor da API
+    tags:
+      - name: Produtos
+        description: Operações relacionadas a produtos
+      - name: Categorias
+        description: Operações relacionadas a categorias
+      - name: Usuários
+        description: Operações relacionadas a usuários
+      - name: Pedidos
+        description: Operações relacionadas a pedidos
+    paths:
+      /products:
+        post:
+          summary: Cadastra um novo produto
+          tags:
+            - Produtos
+          requestBody:
+            required: true
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/ProductInput"
+          responses:
+            "201":
+              description: Produto cadastrado com sucesso
+              content:
+                application/json:
+                  schema:
+                    $ref: "#/components/schemas/Product"
+            "400":
+              description: Requisição inválida (campos faltando ou inválidos)
+            "404":
+              description: Categoria não encontrada (ID inválido ou inexistente)
+            "500":
+              description: Erro interno do servidor
+        get:
+          summary: Lista todos os produtos
+          tags:
+            - Produtos
+          responses:
+            "200":
+              description: Lista de produtos retornada com sucesso
+              content:
+                application/json:
+                  schema:
+                    type: object
+                    properties:
+                      success:
+                        type: boolean
+                      count:
+                        type: integer
+                      data:
+                        type: array
+                        items:
+                          $ref: "#/components/schemas/Product"
+            "500":
+              description: Erro interno do servidor
+      /products/{id}:
+        get:
+          summary: Busca um produto por ID
+          tags:
+            - Produtos
+          parameters:
+            - in: path
+              name: id
+              schema:
+                type: string
+              required: true
+              description: ID do produto
+          responses:
+            "200":
+              description: Produto encontrado com sucesso
+              content:
+                application/json:
+                  schema:
+                    $ref: "#/components/schemas/Product"
+            "404":
+              description: Produto não encontrado (ID inválido ou inexistente)
+            "500":
+              description: Erro interno do servidor
+        put:
+          summary: Atualiza um produto por ID
+          tags:
+            - Produtos
+          parameters:
+            - in: path
+              name: id
+              schema:
+                type: string
+              required: true
+              description: ID do produto a ser atualizado
+          requestBody:
+            required: true
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/ProductInput"
+          responses:
+            "200":
+              description: Produto atualizado com sucesso
+              content:
+                application/json:
+                  schema:
+                    $ref: "#/components/schemas/Product"
+            "400":
+              description: Requisição inválida (campos faltando ou inválidos)
+            "404":
+              description: Produto ou Categoria não encontrado (ID inválido ou inexistente)
+            "500":
+              description: Erro interno do servidor
+        delete:
+          summary: Exclui um produto por ID
+          tags:
+            - Produtos
+          parameters:
+            - in: path
+              name: id
+              schema:
+                type: string
+              required: true
+              description: ID do produto a ser excluído
+          responses:
+            "200":
+              description: Produto excluído com sucesso
+              content:
+                application/json:
+                  schema:
+                    type: object
+                    properties:
+                      success:
+                        type: boolean
+                      message:
+                        type: string
+            "404":
+              description: Produto não encontrado (ID inválido ou inexistente)
+            "500":
+              description: Erro interno do servidor
+      /products/category/{categoryId}:
+        get:
+          summary: Lista produtos por ID de categoria
+          tags:
+            - Produtos
+          parameters:
+            - in: path
+              name: categoryId
+              schema:
+                type: string
+              required: true
+              description: ID da categoria para filtrar produtos
+          responses:
+            "200":
+              description: Produtos da categoria retornados com sucesso
+              content:
+                application/json:
+                  schema:
+                    type: object
+                    properties:
+                      success:
+                        type: boolean
+                      count:
+                        type: integer
+                      data:
+                        type: array
+                        items:
+                          $ref: "#/components/schemas/Product"
+            "404":
+              description: Categoria não encontrada (ID inválido ou inexistente) ou nenhum
+                produto encontrado para esta categoria
+            "500":
+              description: Erro interno do servidor
+      /categories:
+        post:
+          summary: Cadastra uma nova categoria
+          tags:
+            - Categorias
+          requestBody:
+            required: true
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/CategoryInput"
+          responses:
+            "201":
+              description: Categoria cadastrada com sucesso
+              content:
+                application/json:
+                  schema:
+                    $ref: "#/components/schemas/Category"
+            "400":
+              description: Requisição inválida (campos faltando, inválidos ou nome duplicado)
+            "500":
+              description: Erro interno do servidor
+        get:
+          summary: Lista todas as categorias
+          tags:
+            - Categorias
+          responses:
+            "200":
+              description: Lista de categorias retornada com sucesso
+              content:
+                application/json:
+                  schema:
+                    type: object
+                    properties:
+                      success:
+                        type: boolean
+                      count:
+                        type: integer
+                      data:
+                        type: array
+                        items:
+                          $ref: "#/components/schemas/Category"
+            "500":
+              description: Erro interno do servidor
+      /categories/{id}:
+        get:
+          summary: Busca uma categoria por ID
+          tags:
+            - Categorias
+          parameters:
+            - in: path
+              name: id
+              schema:
+                type: string
+              required: true
+              description: ID da categoria
+          responses:
+            "200":
+              description: Categoria encontrada com sucesso
+              content:
+                application/json:
+                  schema:
+                    $ref: "#/components/schemas/Category"
+            "404":
+              description: Categoria não encontrada (ID inválido ou inexistente)
+            "500":
+              description: Erro interno do servidor
+        put:
+          summary: Atualiza uma categoria por ID
+          tags:
+            - Categorias
+          parameters:
+            - in: path
+              name: id
+              schema:
+                type: string
+              required: true
+              description: ID da categoria a ser atualizada
+          requestBody:
+            required: true
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/CategoryInput"
+          responses:
+            "200":
+              description: Categoria atualizada com sucesso
+              content:
+                application/json:
+                  schema:
+                    $ref: "#/components/schemas/Category"
+            "400":
+              description: Requisição inválida (campos faltando, inválidos ou nome duplicado)
+            "404":
+              description: Categoria não encontrada (ID inválido ou inexistente)
+            "500":
+              description: Erro interno do servidor
+        delete:
+          summary: Exclui uma categoria por ID
+          tags:
+            - Categorias
+          parameters:
+            - in: path
+              name: id
+              schema:
+                type: string
+              required: true
+              description: ID da categoria a ser excluída
+          responses:
+            "200":
+              description: Categoria excluída com sucesso
+              content:
+                application/json:
+                  schema:
+                    type: object
+                    properties:
+                      success:
+                        type: boolean
+                      message:
+                        type: string
+            "404":
+              description: Categoria não encontrada (ID inválido ou inexistente)
+            "500":
+              description: Erro interno do servidor
+      /users:
+        post:
+          summary: Cadastra um novo usuário
+          tags:
+            - Usuários
+          requestBody:
+            required: true
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/UserInput"
+          responses:
+            "201":
+              description: Usuário cadastrado com sucesso
+              content:
+                application/json:
+                  schema:
+                    $ref: "#/components/schemas/User"
+            "400":
+              description: Requisição inválida (campos faltando, inválidos ou email duplicado)
+            "500":
+              description: Erro interno do servidor
+        get:
+          summary: Lista todos os usuários
+          tags:
+            - Usuários
+          responses:
+            "200":
+              description: Lista de usuários retornada com sucesso
+              content:
+                application/json:
+                  schema:
+                    type: object
+                    properties:
+                      success:
+                        type: boolean
+                      count:
+                        type: integer
+                      data:
+                        type: array
+                        items:
+                          $ref: "#/components/schemas/User"
+            "500":
+              description: Erro interno do servidor
+      /users/{id}:
+        get:
+          summary: Busca um usuário por ID
+          tags:
+            - Usuários
+          parameters:
+            - in: path
+              name: id
+              schema:
+                type: string
+              required: true
+              description: ID do usuário
+          responses:
+            "200":
+              description: Usuário encontrado com sucesso
+              content:
+                application/json:
+                  schema:
+                    $ref: "#/components/schemas/User"
+            "404":
+              description: Usuário não encontrado (ID inválido ou inexistente)
+            "500":
+              description: Erro interno do servidor
+        delete:
+          summary: Exclui um usuário por ID
+          tags:
+            - Usuários
+          parameters:
+            - in: path
+              name: id
+              schema:
+                type: string
+              required: true
+              description: ID do usuário a ser excluído
+          responses:
+            "200":
+              description: Usuário excluído com sucesso
+              content:
+                application/json:
+                  schema:
+                    type: object
+                    properties:
+                      success:
+                        type: boolean
+                      message:
+                        type: string
+            "404":
+              description: Usuário não encontrado (ID inválido ou inexistente)
+            "500":
+              description: Erro interno do servidor
+      /orders:
+        post:
+          summary: Cadastra um novo pedido
+          tags:
+            - Pedidos
+          requestBody:
+            required:
+              - user
+              - products
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/OrderInput"
+          responses:
+            "201":
+              description: Pedido cadastrado com sucesso
+              content:
+                application/json:
+                  schema:
+                    $ref: "#/components/schemas/Order"
+            "400":
+              description: Requisição inválida (campos faltando, inválidos ou estoque
+                insuficiente)
+            "404":
+              description: Usuário ou Produto(s) não encontrado(s) (ID inválido ou
+                inexistente)
+            "500":
+              description: Erro interno do servidor
+        get:
+          summary: Lista todos os pedidos
+          tags:
+            - Pedidos
+          responses:
+            "200":
+              description: Lista de pedidos retornada com sucesso
+              content:
+                application/json:
+                  schema:
+                    type: object
+                    properties:
+                      success:
+                        type: boolean
+                      count:
+                        type: integer
+                      data:
+                        type: array
+                        items:
+                          $ref: "#/components/schemas/Order"
+            "500":
+              description: Erro interno do servidor
+      /orders/{id}:
+        get:
+          summary: Busca um pedido por ID
+          tags:
+            - Pedidos
+          parameters:
+            - in: path
+              name: id
+              schema:
+                type: string
+              required: true
+              description: ID do pedido
+          responses:
+            "200":
+              description: Pedido encontrado com sucesso
+              content:
+                application/json:
+                  schema:
+                    $ref: "#/components/schemas/Order"
+            "404":
+              description: Pedido não encontrado (ID inválido ou inexistente)
+            "500":
+              description: Erro interno do servidor
+        delete:
+          summary: Exclui um pedido por ID
+          tags:
+            - Pedidos
+          parameters:
+            - in: path
+              name: id
+              schema:
+                type: string
+              required: true
+              description: ID do pedido a ser excluído
+          responses:
+            "200":
+              description: Pedido excluído com sucesso
+              content:
+                application/json:
+                  schema:
+                    type: object
+                    properties:
+                      success:
+                        type: boolean
+                      message:
+                        type: string
+            "404":
+              description: Pedido não encontrado (ID inválido ou inexistente)
+            "500":
+              description: Erro interno do servidor
+      /orders/{id}/status:
+        put:
+          summary: Atualiza o status de um pedido por ID
+          tags:
+            - Pedidos
+          parameters:
+            - in: path
+              name: id
+              schema:
+                type: string
+              required: true
+              description: ID do pedido a ser atualizado
+          requestBody:
+            required: true
+            content:
+              application/json:
+                schema:
+                  $ref: "#/components/schemas/OrderStatusUpdate"
+          responses:
+            "200":
+              description: Status do pedido atualizado com sucesso
+              content:
+                application/json:
+                  schema:
+                    $ref: "#/components/schemas/Order"
+            "400":
+              description: Requisição inválida (status inválido)
+            "404":
+              description: Pedido não encontrado (ID inválido ou inexistente)
+            "500":
+              description: Erro interno do servidor
+      /orders/user/{userId}:
+        get:
+          summary: Lista todos os pedidos de um usuário específico
+          tags:
+            - Pedidos
+          parameters:
+            - in: path
+              name: userId
+              schema:
+                type: string
+              required: true
+              description: ID do usuário para filtrar pedidos
+          responses:
+            "200":
+              description: Pedidos do usuário retornados com sucesso
+              content:
+                application/json:
+                  schema:
+                    type: object
+                    properties:
+                      success:
+                        type: boolean
+                      count:
+                        type: integer
+                      data:
+                        type: array
+                        items:
+                          $ref: "#/components/schemas/Order"
+            "404":
+              description: Usuário não encontrado (ID inválido ou inexistente) ou nenhum
+                pedido encontrado para este usuário
+            "500":
+              description: Erro interno do servidor
+    components:
+      schemas:
+        ProductInput:
+          type: object
+          required:
+            - name
+            - description
+            - price
+            - quantity
+            - category
+          properties:
+            name:
+              type: string
+              description: Nome do produto
+              example: Smartphone X
+            description:
+              type: string
+              description: Descrição detalhada do produto
+              example: Smartphone de última geração com câmera de alta resolução.
+            price:
+              type: number
+              format: float
+              description: Preço do produto
+              example: 999.99
+            quantity:
+              type: integer
+              description: Quantidade em estoque
+              example: 50
+            category:
+              type: string
+              description: ID da categoria à qual o produto pertence
+              example: 60d5ec49f8c6d1a2b4e5f6g7
+        Product:
+          type: object
+          properties:
+            _id:
+              type: string
+              description: ID único do produto
+              example: 60d5ec49f8c6d1a2b4e5f6g7
+            name:
+              type: string
+              description: Nome do produto
+              example: Smartphone X
+            description:
+              type: string
+              description: Descrição detalhada do produto
+              example: Smartphone de última geração com câmera de alta resolução.
+            price:
+              type: number
+              format: float
+              description: Preço do produto
+              example: 999.99
+            quantity:
+              type: integer
+              description: Quantidade em estoque
+              example: 50
+            category:
+              type: object
+              properties:
+                _id:
+                  type: string
+                  example: 60d5ec49f8c6d1a2b4e5f6g7
+                name:
+                  type: string
+                  example: Eletrônicos
+              description: Categoria à qual o produto pertence (populada)
+            createdAt:
+              type: string
+              format: date-time
+              description: Data de criação do produto
+              example: 2023-10-27T10:00:00.000Z
+        CategoryInput:
+          type: object
+          required:
+            - name
+            - description
+          properties:
+            name:
+              type: string
+              description: Nome da categoria
+              example: Eletrônicos
+            description:
+              type: string
+              description: Descrição da categoria
+              example: Produtos eletrônicos como smartphones, laptops, etc.
+        Category:
+          type: object
+          properties:
+            _id:
+              type: string
+              description: ID único da categoria
+              example: 60d5ec49f8c6d1a2b4e5f6g7
+            name:
+              type: string
+              description: Nome da categoria
+              example: Eletrônicos
+            description:
+              type: string
+              description: Descrição da categoria
+              example: Produtos eletrônicos como smartphones, laptops, etc.
+            createdAt:
+              type: string
+              format: date-time
+              description: Data de criação da categoria
+              example: 2023-10-27T10:00:00.000Z
+        UserInput:
+          type: object
+          required:
+            - name
+            - email
+          properties:
+            name:
+              type: string
+              description: Nome do usuário
+              example: João Silva
+            email:
+              type: string
+              format: email
+              description: Endereço de email do usuário (deve ser único)
+              example: joao.silva@example.com
+        User:
+          type: object
+          properties:
+            _id:
+              type: string
+              description: ID único do usuário
+              example: 60d5ec49f8c6d1a2b4e5f6g7
+            name:
+              type: string
+              description: Nome do usuário
+              example: João Silva
+            email:
+              type: string
+              format: email
+              description: Endereço de email do usuário
+              example: joao.silva@example.com
+            createdAt:
+              type: string
+              format: date-time
+              description: Data de criação do usuário
+              example: 2023-10-27T10:00:00.000Z
+        OrderProduct:
+          type: object
+          required:
+            - product
+            - quantity
+          properties:
+            product:
+              type: string
+              description: ID do produto
+              example: 60d5ec49f8c6d1a2b4e5f6g7
+            quantity:
+              type: integer
+              description: Quantidade do produto no pedido
+              example: 2
+        OrderInput:
+          type: object
+          required:
+            - user
+            - products
+          properties:
+            user:
+              type: string
+              description: ID do usuário que fez o pedido
+              example: 60d5ec49f8c6d1a2b4e5f6g7
+            products:
+              type: array
+              items:
+                $ref: "#/components/schemas/OrderProduct"
+              description: Lista de produtos e suas quantidades no pedido
+            totalAmount:
+              type: number
+              format: float
+              readOnly: true
+              description: Valor total do pedido (calculado pelo servidor)
+              example: 1999.98
+        Order:
+          type: object
+          properties:
+            _id:
+              type: string
+              description: ID único do pedido
+              example: 60d5ec49f8c6d1a2b4e5f6g7
+            user:
+              type: object
+              properties:
+                _id:
+                  type: string
+                  example: 60d5ec49f8c6d1a2b4e5f6g7
+                name:
+                  type: string
+                  example: João Silva
+                email:
+                  type: string
+                  example: joao.silva@example.com
+              description: Usuário que fez o pedido (populado)
+            products:
+              type: array
+              items:
+                type: object
+                properties:
+                  _id:
+                    type: string
+                    example: 60d5ec49f8c6d1a2b4e5f6g7
+                  product:
+                    type: object
+                    properties:
+                      _id:
+                        type: string
+                        example: 60d5ec49f8c6d1a2b4e5f6g7
+                      name:
+                        type: string
+                        example: Smartphone X
+                      price:
+                        type: number
+                        example: 999.99
+                    description: Detalhes do produto (populado)
+                  quantity:
+                    type: integer
+                    example: 2
+              description: Lista de produtos e suas quantidades no pedido
+            totalAmount:
+              type: number
+              format: float
+              description: Valor total do pedido
+              example: 1999.98
+            status:
+              type: string
+              enum:
+                - Pendente
+                - Processando
+                - Enviado
+                - Entregue
+                - Cancelado
+              description: Status atual do pedido
+              example: Pendente
+            orderDate:
+              type: string
+              format: date-time
+              description: Data do pedido
+              example: 2023-10-27T10:30:00.000Z
+        OrderStatusUpdate:
+          type: object
+          required:
+            - status
+          properties:
+            status:
+              type: string
+              enum:
+                - Pendente
+                - Processando
+                - Enviado
+                - Entregue
+                - Cancelado
+              description: Novo status do pedido
+              example: Enviado
+  meta:
+    id: spc_36715c606cb542038f3b0f2dc670117b
+    created: 1751941174497
+    modified: 1751941174498
